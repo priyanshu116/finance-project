@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
 
 // ONBOARDING SCREENS :
 import 'package:app/screens/onboarding/splash_screen.dart';
@@ -16,10 +16,14 @@ import 'package:app/screens/signup/reset_password.dart';
 
 // MAIN APP SCREENS :
 import 'package:app/screens/main-app/profile.dart';
+import 'package:app/screens/main-app/expense/expense.dart';
+import 'package:app/screens/main-app/expense/budget.dart';
+import 'package:app/screens/main-app/expense/income.dart';
 import 'package:app/screens/main-app/settings.dart';
 import 'package:app/screens/main-app/currency.dart';
 
-void main() async {
+void main() async
+{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
@@ -51,9 +55,7 @@ class MyApp extends StatelessWidget
         "/forgot-password" : (context) => const ForgotPassword(),
         "/reset-password"  : (context) => const ResetPassword(),
 
-        "/profile" : (context) => const Profile(),
-        "/settings" : (context) => const Settings(),      
-        "/currency" : (context) => const Currency()
+        "/profile" : (context) => const Profile()
       }
     );
   }
