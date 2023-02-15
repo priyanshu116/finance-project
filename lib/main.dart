@@ -23,6 +23,9 @@ import 'package:app/screens/Expense/expense.dart';
 //Budget page
 import 'package:app/screens/Expense/budget.dart';
 
+//Income Page
+import 'package:app/screens/Expense/income.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -43,7 +46,7 @@ class MyApp extends StatelessWidget
         useMaterial3: true
       ),
 
-      initialRoute: "/budget",
+      initialRoute: "/income",
       routes: {
         "/" : (context) => const SplashScreen(),
         "/onboarding1" : (context) => const Onboarding1(),
@@ -59,6 +62,7 @@ class MyApp extends StatelessWidget
 
         "/expense" : (context) => const expense(),
         "/budget" : (context) => const budget(),
+        "/income" : (context) => const income(),
       }
     );
   }
