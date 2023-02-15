@@ -15,67 +15,90 @@ class _IncomeState extends State<Income>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      body: Container(
-        width: double.maxFinite,
-        height: double.maxFinite,
-        padding: EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                icon: Icon(Icons.keyboard_backspace_rounded),
-                onPressed: () {},
+
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(223, 78, 243, 130),
+      ),
+
+      body: SafeArea(
+        child: Container(
+          width: double.maxFinite,
+          height: double.maxFinite,
+          // padding: EdgeInsets.all(20),
+
+          child: ListView(
+            children: [
+
+              Column(
+                children: [
+
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height/5,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(223, 78, 243, 130),
+                          Color.fromARGB(255, 252, 252, 252)
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      ),
+                    ),
+
+                    child: Text(
+                      "Income",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+
+                  Padding(
+                    padding: EdgeInsets.only(left: 40, right: 40),
+
+                    child: TextField(
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold
+                      ),
+                      decoration: const InputDecoration(
+                        labelText: "₹",
+                        labelStyle: TextStyle(color: Colors.black),
+                        contentPadding: EdgeInsets.all(10),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: EdgeInsets.only(left: 40, right: 40),
+
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Description",
+                        filled: true,
+                        fillColor: Color(0xffF1F1F1),
+                        border: OutlineInputBorder(),
+                        contentPadding: EdgeInsets.all(10),
+                      ),
+                      style: TextStyle(fontSize: 18),
+                      maxLines: 6,
+                    ),
+                  ),
+
+                  Container(
+                      alignment: Alignment.bottomCenter,
+                      padding: EdgeInsets.only(top: 200),
+                      child: Button(text: "Continue", onPressed: () {}),
+                  ),
+                ],
               ),
-            ),
-
-            Container(
-              child: Text("Income",
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),
-
-            TextFormField(
-             decoration: const InputDecoration(
-             border: UnderlineInputBorder(),
-             labelText: 'Rs ',
-             contentPadding: EdgeInsets.all(10),
-  ),
-),
-
-           TextField(
-            decoration: InputDecoration(
-              filled: true,
-              fillColor: Color.fromARGB(255, 209, 204, 204),
-              contentPadding: EdgeInsets.all(50),
-              border: OutlineInputBorder(),
-              hintText: 'Description  ',
-            ),
-           ),
-
-            Container(
-              alignment: Alignment.bottomCenter,
-              padding: EdgeInsets.only(top: 250),
-              child: Button(
-                text: "Continue",
-                onPressed: () {},
-              ),
-            )
-          ],
+            ],
+          ),
         ),
-
-        /*background color */
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(223, 78, 243, 130),
-            Color.fromARGB(255, 252, 252, 252)
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        )),
       ),
     );
   }
