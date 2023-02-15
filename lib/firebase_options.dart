@@ -66,7 +66,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '988620818401',
     projectId: 'finance-project-45d87',
     storageBucket: 'finance-project-45d87.appspot.com',
-    androidClientId: '988620818401-qvb2rdjsmvsi5fbcqo8780mhj79dh4lv.apps.googleusercontent.com',
+    androidClientId: '988620818401-lkbt2dnlj328fqjkemedia6vmerk42tl.apps.googleusercontent.com',
     iosClientId: '988620818401-e8hv8vbfqn3fgfchdn8od2j40k863bti.apps.googleusercontent.com',
     iosBundleId: 'com.example.financeProject',
   );
@@ -77,7 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '988620818401',
     projectId: 'finance-project-45d87',
     storageBucket: 'finance-project-45d87.appspot.com',
-    androidClientId: '988620818401-qvb2rdjsmvsi5fbcqo8780mhj79dh4lv.apps.googleusercontent.com',
+    androidClientId: '988620818401-lkbt2dnlj328fqjkemedia6vmerk42tl.apps.googleusercontent.com',
     iosClientId: '988620818401-e8hv8vbfqn3fgfchdn8od2j40k863bti.apps.googleusercontent.com',
     iosBundleId: 'com.example.financeProject',
   );
