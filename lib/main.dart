@@ -16,6 +16,8 @@ import 'package:app/screens/signup/reset_password.dart';
 
 // MAIN APP SCREENS :
 import 'package:app/screens/main-app/profile.dart';
+import 'package:app/screens/main-app/settings.dart';
+import 'package:app/screens/main-app/currency.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -49,7 +51,9 @@ class MyApp extends StatelessWidget
         "/forgot-password" : (context) => const ForgotPassword(),
         "/reset-password"  : (context) => const ResetPassword(),
 
-        "/profile" : (context) => const Profile()
+        "/profile" : (context) => const Profile(),
+        "/settings" : (context) => const Settings(),      
+        "/currency" : (context) => const Currency()
       }
     );
   }
