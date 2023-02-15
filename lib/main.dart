@@ -26,7 +26,8 @@ import 'package:app/screens/Expense/budget.dart';
 //Income Page
 import 'package:app/screens/Expense/income.dart';
 
-void main() async {
+void main() async
+{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
