@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
 
 // ONBOARDING SCREENS :
 import 'package:app/screens/onboarding/splash_screen.dart';
@@ -16,15 +16,9 @@ import 'package:app/screens/signup/reset_password.dart';
 
 // MAIN APP SCREENS :
 import 'package:app/screens/main-app/profile.dart';
-
-//Expense Pages
-import 'package:app/screens/Expense/expense.dart';
-
-//Budget page
-import 'package:app/screens/Expense/budget.dart';
-
-//Income Page
-import 'package:app/screens/Expense/income.dart';
+import 'package:app/screens/main-app/expense/expense.dart';
+import 'package:app/screens/main-app/expense/budget.dart';
+import 'package:app/screens/main-app/expense/income.dart';
 
 void main() async
 {
@@ -47,7 +41,7 @@ class MyApp extends StatelessWidget
         useMaterial3: true
       ),
 
-      initialRoute: "/income",
+      initialRoute: "/",
       routes: {
         "/" : (context) => const SplashScreen(),
         "/onboarding1" : (context) => const Onboarding1(),
@@ -61,9 +55,9 @@ class MyApp extends StatelessWidget
 
         "/profile" : (context) => const Profile(),
 
-        "/expense" : (context) => const expense(),
-        "/budget" : (context) => const budget(),
-        "/income" : (context) => const income(),
+        "/expense" : (context) => const Expense(),
+        "/budget"  : (context) => const Budget(),
+        "/income"  : (context) => const Income(),
       }
     );
   }
