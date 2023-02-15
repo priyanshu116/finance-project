@@ -19,6 +19,8 @@ import 'package:app/screens/main-app/profile.dart';
 import 'package:app/screens/main-app/expense/expense.dart';
 import 'package:app/screens/main-app/expense/budget.dart';
 import 'package:app/screens/main-app/expense/income.dart';
+import 'package:app/screens/main-app/settings.dart';
+import 'package:app/screens/main-app/currency.dart';
 
 void main() async
 {
@@ -53,11 +55,7 @@ class MyApp extends StatelessWidget
         "/forgot-password" : (context) => const ForgotPassword(),
         "/reset-password"  : (context) => const ResetPassword(),
 
-        "/profile" : (context) => const Profile(),
-
-        "/expense" : (context) => const Expense(),
-        "/budget"  : (context) => const Budget(),
-        "/income"  : (context) => const Income(),
+        "/profile" : (context) => const Profile()
       }
     );
   }

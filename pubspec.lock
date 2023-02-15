@@ -42,21 +42,33 @@ packages:
       name: cloud_firestore
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
+    version: "4.3.2"
+=======
     version: "4.4.0"
+>>>>>>> ffa8b91eddafd75c923cc9b8fea35cd8b23675a3
   cloud_firestore_platform_interface:
     dependency: transitive
     description:
       name: cloud_firestore_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
+    version: "5.10.2"
+=======
     version: "5.11.0"
+>>>>>>> ffa8b91eddafd75c923cc9b8fea35cd8b23675a3
   cloud_firestore_web:
     dependency: transitive
     description:
       name: cloud_firestore_web
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
+    version: "3.2.2"
+=======
     version: "3.3.0"
+>>>>>>> ffa8b91eddafd75c923cc9b8fea35cd8b23675a3
   collection:
     dependency: transitive
     description:
@@ -125,6 +137,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_lints:
+    dependency: "direct dev"
+    description:
+      name: flutter_lints
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
   flutter_test:
     dependency: transitive
     description: flutter
@@ -205,6 +224,16 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.4"
+<<<<<<< HEAD
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
+=======
+>>>>>>> ffa8b91eddafd75c923cc9b8fea35cd8b23675a3
   matcher:
     dependency: transitive
     description:
