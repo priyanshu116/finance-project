@@ -11,165 +11,94 @@ class Expense extends StatefulWidget
 
 class _ExpenseState extends State<Expense>
 {
-  // String dropdownValue = 'Category';
-  // bool _isEditingText = true;
-  // late TextEditingController _editingController;
-  // String initialText = "initial Text";
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _editingController = TextEditingController(text: initialText);
-  // }
-
-  // @override
-  // void dispose() {
-  //   _editingController.dispose();
-  //   super.dispose();
-  // }
-
-  // Widget _editTitleTextField() {
-  //   if (_isEditingText)
-  //     return Center(
-  //       child: TextField(
-  //         onSubmitted: (newValue) {
-  //           setState(() {
-  //             initialText = newValue;
-  //             _isEditingText = false;
-  //           });
-  //         },
-  //         autofocus: true,
-  //         controller: _editingController,
-  //       ),
-  //     );
-
-  //   return InkWell(
-  //     onTap: () {
-  //       setState(() {
-  //         _isEditingText = true;
-  //       });
-  //     },
-  //     child: Text(
-  //       initialText,
-  //       style: TextStyle(
-  //         color: Colors.black,
-  //         fontSize: 18.0,
-  //       ),
-  //     ),
-  //   );
-  // }
-
-  // @override
-  // Widget build(BuildContext context){
-  //   return DropdownButton<String>(
-  //     value: dropdownValue,
-  //     icon: Icon(Icons.arrow_downward),
-  //     iconSize: 24,
-  //     elevation: 16,
-  //     style: TextStyle(color: Colors.deepPurple),
-  //     underline: Container(
-  //       height: 2,
-  //       color: Colors.redAccent,
-  //     ),
-  //     onChanged: (String? newValue){
-  //       setState(() {
-  //         dropdownValue = newValue!;
-  //       });
-  //     },
-  //     items: <String>['Food', 'Home','A', 'B'].map<DropdownMenuItem<String>>((String value){
-  //       return DropdownMenuItem<String>(
-  //         value: value,
-  //         child: Row(children: [
-
-  //           IconButton(
-  //             icon: Icon(Icons.home),
-  //             color: Colors.redAccent,
-  //             onPressed: () {  },),
-  //           Text(value),
-  //         ]),
-  //       );
-  //     }).toList(),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      body: Container(
-        width: double.maxFinite,
-        height: double.maxFinite,
-        padding: EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                icon: Icon(Icons.keyboard_backspace_rounded),
-                onPressed: () {},
+
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(223, 243, 86, 78),
+      ),
+
+      body: SafeArea(
+        child: Container(
+          width: double.maxFinite,
+          height: double.maxFinite,
+          // padding: EdgeInsets.all(20),
+
+          child: ListView(
+            children: [
+
+              Column(
+                children: [
+
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height/5,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(223, 243, 86, 78),
+                          Color.fromARGB(255, 252, 252, 252)
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      ),
+                    ),
+
+                    child: Text(
+                      "Expense",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+
+                  Padding(
+                    padding: EdgeInsets.only(left: 40, right: 40),
+
+                    child: TextField(
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold
+                      ),
+                      decoration: const InputDecoration(
+                        labelText: "₹",
+                        labelStyle: TextStyle(color: Colors.black),
+                        contentPadding: EdgeInsets.all(10),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: EdgeInsets.only(left: 40, right: 40),
+
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Description",
+                        filled: true,
+                        fillColor: Color(0xffF1F1F1),
+                        border: OutlineInputBorder(),
+                        contentPadding: EdgeInsets.all(10),
+                      ),
+                      style: TextStyle(fontSize: 18),
+                      maxLines: 6,
+                    ),
+                  ),
+
+                  Container(
+                      alignment: Alignment.bottomCenter,
+                      padding: EdgeInsets.only(top: 200),
+                      child: Button(text: "Continue", onPressed: () {}),
+                  ),
+                ],
               ),
-            ),
-
-            Container(
-              child: Text("Expense",
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),
-
-            TextFormField(
-             decoration: const InputDecoration(
-             border: UnderlineInputBorder(),
-             labelText: 'Rs ',
-             contentPadding: EdgeInsets.all(10),
-  ),
-),
-
-           TextField(
-            decoration: InputDecoration(
-              filled: true,
-              fillColor: Color.fromARGB(255, 209, 204, 204),
-              contentPadding: EdgeInsets.all(50),
-              border: OutlineInputBorder(),
-              hintText: 'Description  ',
-            ),
-           ),
-
-//             // Container(
-//             //   padding: EdgeInsets.all(8.0),
-//             //   SizedBox(
-//             //     height: 50,
-//             //   ),
-//             //   DropdownButton<String>{
-//             //     value: dropdownValue,
-
-//             //     items: <String>['Category', 'A', 'B', 'C'].map<DropdownMenuItem<String>>((String value){
-//             //     })
-//             //   }
-//             // )
-
-            Container(
-              alignment: Alignment.bottomCenter,
-              padding: EdgeInsets.only(top: 250),
-              child: Button(
-                text: "Continue",
-                onPressed: () {},
-              ),
-            )
-          ],
+            ],
+          ),
         ),
-
-        /*background color */
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(224, 221, 111, 111),
-            Color.fromARGB(255, 248, 248, 248)
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        )),
       ),
     );
   }
