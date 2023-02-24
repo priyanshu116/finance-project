@@ -40,8 +40,9 @@ class _incomeState extends State<income> {
              border: UnderlineInputBorder(),
              labelText: 'Rs ',
              contentPadding: EdgeInsets.all(10),
-  ),
-),
+          ),
+        ),
+
 
            TextField(
             decoration: InputDecoration(
