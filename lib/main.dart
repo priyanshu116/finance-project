@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget
         useMaterial3: true
       ),
 
-      initialRoute: "/income",
+      initialRoute: "/",
       routes: {
         "/" : (context) => const SplashScreen(),
         "/onboarding1" : (context) => const Onboarding1(),
@@ -55,7 +55,13 @@ class MyApp extends StatelessWidget
         "/forgot-password" : (context) => const ForgotPassword(),
         "/reset-password"  : (context) => const ResetPassword(),
 
-        "/profile" : (context) => const Profile()
+        "/profile" : (context) => const Profile(),
+        "/settings" : (context) => const Settings(),
+        "/currency" :(context) => const Currency(),
+        "/budget" :(context) => const Budget(),
+        "/expense" :(context) => const Expense(),
+        "/income" :(context) => const Income(),
+
       }
     );
   }
