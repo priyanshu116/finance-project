@@ -1,6 +1,10 @@
+import 'package:app/screens/main-app/expense/budget.dart';
+import 'package:app/screens/main-app/expense/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:app/widgets/profile_menu.dart';
 import 'package:app/widgets/bottom_navbar.dart';
+import 'package:app/screens/main-app/settings.dart';
+import 'package:app/screens/main-app/expense/income.dart';
 
 class Profile extends StatelessWidget
 {
@@ -66,30 +70,52 @@ class Profile extends StatelessWidget
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-                children: const [
+                children:  [
                   /* ACCOUNT */
-                  ProfileMenu(
-                    text: "Account",
-                    icon: Icon(Icons.wallet_membership, size: 30)
+                  InkWell(
+                    child: ProfileMenu(
+                    text: "Income",
+                    icon: Icon(Icons.savings_outlined, size: 30)
                   ),
+                  onTap: (() => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Income()))
+                  }),
+                  ),
+                  
 
                   /* SETTINGS */
-                  ProfileMenu(
-                    text: "Settings",
-                    icon: Icon(Icons.settings, size: 30)
+                  InkWell(
+                    child: ProfileMenu(
+                      text: "Settings",
+                      icon: Icon(Icons.settings, size: 30)
+                    ),
+                    onTap: () => {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()))
+                    },
                   ),
 
                   /* EXPORT DATA */
-                  ProfileMenu(
-                    text: "Export Data",
+                  InkWell(
+                    child: ProfileMenu(
+                    text: "Expense",
                     icon: Icon(Icons.arrow_upward, size: 30)
                   ),
+                  onTap: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Expense()))
+                  },
+                  ),
+                  
 
                   /* LOG OUT */
-                  ProfileMenu(
-                    text: "Logout",
-                    icon: Icon(Icons.logout, size: 30)
-                  )
+                  InkWell(
+                    child: ProfileMenu(
+                    text: "Budget",
+                    icon: Icon(Icons.pie_chart_outline, size: 30)
+                  ),
+                  onTap: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Budget()))
+                  },
+                  ),
                 ]
               )
             )
